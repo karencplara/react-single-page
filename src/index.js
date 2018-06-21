@@ -3,7 +3,11 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import registerServiceWorker from './registerServiceWorker';
-import './include/bootstrap'
+import './include/bootstrap';
+import { BrowserRouter } from 'react-router-dom'; //rotas
 
-ReactDOM.render(<App />, document.getElementById('root'));
-registerServiceWorker();
+ReactDOM.render(
+    <BrowserRouter>
+        <App />
+    </BrowserRouter>,
+     document.getElementById('root'));

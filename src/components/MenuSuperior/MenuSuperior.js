@@ -1,19 +1,29 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom"; //links rotas
 
 class MenuSuperior extends Component{
     render(){
         return(
-            <nav className = "navbar navbar-expand-lg  navbar-dark bg-dark">
-                <a href ="/" className = "navbar-brand">Single Page</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
-                   <span class="navbar-toggler-icon"></span>
+            <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+                <Link to="/" className="navbar-brand">Aplicação Single Page</Link>
+                <button className="navbar-toggler" type="button"
+                data-toggle="collapse" data-target="#navbarNav">
+                    <span className="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="navbar">
-                    <ul class="navbar-nav">
-                    
-                    </ul>
+                <div className="collapse navbar-collapse" id="navbarNav">
+                <ul className="navbar-nav mr-auto">
+                <li className="nav-item">
+                    <Link to="/" className="nav-link">Resumo</Link>
+                </li>
+                <li className="nav-item">
+                    <Link to="/consultas" className="nav-link">Consultas</Link>
+                </li>
+                <li className="nav-item">
+                    <Link to="/faturamento" className="nav-link">Faturamento</Link>
+                </li>
+                </ul>
                 </div>
-            </nav>
+          </nav>
         )
     }
 }
